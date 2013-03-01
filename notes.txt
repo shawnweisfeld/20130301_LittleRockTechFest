@@ -1,0 +1,86 @@
+ public class Customer
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public int Age { get; set; }
+
+        public static List<Customer> GetCustomers()
+        {
+            var customers = new List<Customer>();
+
+            for (int i = 0; i < 10; i++)
+            {
+                customers.Add(new Customer()
+                    {
+                        FirstName = string.Format("First {0}", i),
+                        LastName = string.Format("Last {0}", i),
+                        Age = i
+                    });
+            }
+
+            return customers;
+        }
+    }
+
+
+
+        public ActionResult Customers()
+        {
+            var customers = Customer.GetCustomers();
+
+            var result = new JsonResult();
+            result.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
+            result.Data = customers;
+            return result;
+        }
+
+
+
+    public class CustomerController : ApiController
+    {
+        public List<Customer> Get()
+        { 
+            return Customer.GetCustomers();
+        }
+    }
+
+
+
+
+
+<ul id="customers"></ul>
+
+@section scripts{
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.getJSON('/home/customers', function (data) {
+            var items = [];
+
+            $.each(data, function (i, customer) {
+                items.push('<li>' + customer.LastName +', ' + customer.FirstName + '</li>');
+            });
+
+            $("#customers").html(items.join(''));
+        });
+    });
+</script>    
+}
+
+
+
+
+
+
+
+            var client = new RestClient("http://localhost:8092");
+            var request = new RestRequest("home/customers", Method.GET);
+            var response = client.Execute<List<Customer>>(request);
+
+
+
+      var client = new WebClient();
+            var response = client.DownloadString("http://localhost:8092/home/customers");
+            var data = JsonConvert.DeserializeObject<List<Customer>>(response);
+      
+
+
