@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication1", "MvcApplication1\MvcApplication1.csproj", "{E6494CFF-F513-425B-8555-4B834255F19F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithJson.Console", "FunWithJson.Console\FunWithJson.Console.csproj", "{03C45D35-D741-423F-B496-CD4CC4084E70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6494CFF-F513-425B-8555-4B834255F19F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6494CFF-F513-425B-8555-4B834255F19F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6494CFF-F513-425B-8555-4B834255F19F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6494CFF-F513-425B-8555-4B834255F19F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03C45D35-D741-423F-B496-CD4CC4084E70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03C45D35-D741-423F-B496-CD4CC4084E70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03C45D35-D741-423F-B496-CD4CC4084E70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03C45D35-D741-423F-B496-CD4CC4084E70}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
